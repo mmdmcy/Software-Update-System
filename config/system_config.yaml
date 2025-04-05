@@ -1,0 +1,32 @@
+update_process:
+  enabled: true
+  frequency: daily
+  time: "02:00"
+  retry_attempts: 3
+  timeout: 600
+
+rollback:
+  enabled: true
+  max_retries: 2
+  notify_on_failure: true
+
+notification:
+  email:
+    enabled: true
+    recipients:
+      - admin@example.com
+      - support@example.com
+  logging:
+    enabled: true
+    log_level: info
+
+system_monitor:
+  metrics:
+    cpu_usage: true
+    memory_usage: true
+    disk_space: true
+  log_interval: 300
+
+package_manager:
+  auto_cleanup: true
+  cleanup_threshold: 10
