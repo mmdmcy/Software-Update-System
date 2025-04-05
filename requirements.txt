@@ -1,0 +1,7 @@
+Flask==2.0.3
+requests==2.26.0
+PyYAML==5.4.1
+pytest==6.2.5
+psutil==5.8.0
+schedule==1.1.0
+logging==0.5.1.2

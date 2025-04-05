@@ -1,0 +1,53 @@
+loggers:
+  file:
+    level: DEBUG
+    path: /var/log/software_update_system.log
+    format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  console:
+    level: INFO
+    format: '%(name)s - %(levelname)s - %(message)s'
+    
+handlers:
+  file_handler:
+    class: logging.FileHandler
+    formatter: file
+    level: DEBUG
+    filename: /var/log/software_update_system.log
+  console_handler:
+    class: logging.StreamHandler
+    formatter: console
+    level: INFO
+
+loggers:
+  update_manager:
+    level: DEBUG
+    handlers: [file_handler, console_handler]
+    propagate: no
+  package_manager:
+    level: DEBUG
+    handlers: [file_handler, console_handler]
+    propagate: no
+  system_monitor:
+    level: DEBUG
+    handlers: [file_handler, console_handler]
+    propagate: no
+  update_service:
+    level: DEBUG
+    handlers: [file_handler, console_handler]
+    propagate: no
+  rollback_service:
+    level: DEBUG
+    handlers: [file_handler, console_handler]
+    propagate: no
+  notification_service:
+    level: DEBUG
+    handlers: [file_handler, console_handler]
+    propagate: no
+  process_handler:
+    level: DEBUG
+    handlers: [file_handler, console_handler]
+    propagate: no
+  hardware_interface:
+    level: DEBUG
+    handlers: [file_handler, console_handler]
+    propagate: no
